@@ -52,8 +52,9 @@
             </div>
           </div>
         <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-          <a href="{{ route('product.index') }}"></a>
+          <a href="{{ route('product.index') }}">
           <button type="button" class="btn btn-outline-secondary btn-lg px-4">もっと見る</button>
+          </a>
         </div>
         
         {{-- 新着アイテム --}}
@@ -102,8 +103,9 @@
           </div>
         </div>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-        <a href="{{ route('product.index') }}"></a>
+        <a href="{{ route('product.index') }}">
         <button type="button" class="btn btn-outline-secondary btn-lg px-4">もっと見る</button>
+        </a>
       </div>
 
       {{-- 総合レビュー --}}

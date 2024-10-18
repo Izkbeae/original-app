@@ -144,8 +144,8 @@
                 <hr class="my-4">
 
                 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-                    <button type="button" class="btn btn-outline-secondary btn-lg px-4">登録</button>
-                  </div>
+                    <button type="submit" class="btn btn-outline-secondary btn-lg px-4">登録</button>
+                </div>
             </form>
 
             <div class="text-center">

@@ -13,6 +13,7 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\TermController;
+use App\Http\Controllers\Auth\VerifyEmailController;
 
 
 /*
@@ -26,9 +27,10 @@ use App\Http\Controllers\TermController;
 |
 */
 
-    //Home
-  Route::group(['middleware' => 'guest:admin'], function () {
-    Route::get('/', [HomeController::class, 'index'])->name('home');
+
+//Home
+Route::group(['middleware' => 'guest:admin'], function () {
+  Route::get('/', [HomeController::class, 'index'])->name('home');
 
     //商品
     Route::get('/product', [ProductController::class, 'index'])->name('product.index');
@@ -44,26 +46,25 @@ use App\Http\Controllers\TermController;
     Route::group(['middleware' => ['auth', 'verified']], function () {
       Route::resource('user', UserController::class)->only(['index', 'edit', 'update']);
 
-    //レビューページ
-    Route::resource('restaurants.reviews', ReviewController::class)->only(['index']);
+      //レビューページ
+      Route::resource('restaurants.reviews', ReviewController::class)->only(['index']);
 
-    //一般ユーザとしてログイン済かつメール認証済で有料プラン未登録の場合
+      //一般ユーザとしてログイン済かつメール認証済で有料プラン未登録の場合
       Route::group(['middleware' => [NotSubscribed::class]], function () {
           Route::get('subscription/create', [SubscriptionController::class, 'create'])->name('subscription.create');
           Route::post('subscription', [SubscriptionController::class, 'store'])->name('subscription.store');
       });
-          Route::resource('restaurants.reviews', ReviewController::class)->only(['create', 'store', 'edit', 'update', 'destroy']);
-        
-          Route::resource('reservations', ReservationController::class)->only(['index', 'destroy']);
-          Route::resource('restaurants.reservations', ReservationController::class)->only(['create', 'store']);
-        
-          Route::get('favorites', [FavoriteController::class, 'index'])->name('favorites.index');
-          Route::post('favorites/{restaurant_id}', [FavoriteController::class, 'store'])->name('favorites.store');
-          Route::delete('favorites/{restaurant_id}', [FavoriteController::class, 'destroy'])->name('favorites.destroy');
+      Route::resource('restaurants.reviews', ReviewController::class)->only(['create', 'store', 'edit', 'update', 'destroy']);
+    
+      Route::resource('reservations', ReservationController::class)->only(['index', 'destroy']);
+      Route::resource('restaurants.reservations', ReservationController::class)->only(['create', 'store']);
+    
+      Route::get('favorites', [FavoriteController::class, 'index'])->name('favorites.index');
+      Route::post('favorites/{restaurant_id}', [FavoriteController::class, 'store'])->name('favorites.store');
+      Route::delete('favorites/{restaurant_id}', [FavoriteController::class, 'destroy'])->name('favorites.destroy');
        
-        });
-      });
-      ;
+    });
+  });
 require __DIR__.'/auth.php';
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth:admin'], function () {

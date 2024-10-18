@@ -7,23 +7,7 @@
       
 
       <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">Login</button>
-        <button type="button" class="btn btn-primary">Sign-up</button>
+        <button type="button" class="btn btn-outline-primary me-2">ログイン</button>
+        <button type="button" class="btn btn-primary">新規登録</button>
       </div>
     </header>
-
-    <nav class="navbar navbar-expand-md bg-white sticky-top border-bottom" data-bs-theme="white" >
-        <div class="container">
-              <ul class="navbar-nav flex-grow-1 justify-content-between">
-                <li class="nav-item"><a class="nav-link" href="#">液体洗剤</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">液体柔軟剤</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">衣類用染料</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">しみ抜き剤</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">粉末洗剤</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">おしゃれ着洗剤</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">漂白剤</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">ジェルボール型洗剤</a></li>
-              </ul>
-        </div>
-      </nav>
-      
