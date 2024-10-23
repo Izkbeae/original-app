@@ -7,13 +7,17 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function index() {
-        return view('products.index');
+    public function index() 
+    {
+        // productsテーブルからデータを取得
+        $products = Product::all(); // 全ての製品を取得する場合
+
+        return view('products.index', compact('products'));
     }
 
     public function create()
     {
-        // 作成ページを返す
+        return view('products.create');
     }
 
     public function store(Request $request)

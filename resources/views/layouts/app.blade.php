@@ -19,7 +19,10 @@
         @include('layouts.header')
 
         <main>
-            @yield('content')
+            <div class="container">
+                <h1 class="fs-2 my-3">@yield('title')</h1>
+                @yield('content')
+            </div>
         </main>
 
         @include('layouts.footer')

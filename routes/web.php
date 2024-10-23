@@ -28,12 +28,15 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 */
 
 
-//Home
-Route::group(['middleware' => 'guest:admin'], function () {
+  //Home
+  Route::group(['middleware' => 'guest:admin'], function () {
   Route::get('/', [HomeController::class, 'index'])->name('home');
 
     //商品
     Route::get('/product', [ProductController::class, 'index'])->name('product.index');
+
+    Route::get('products/create', [ProductController::class, 'create'])->name('products.create');
+
 
     Route::resource('products', ProductController::class)->only(['index','show']);
     

@@ -1,3 +1,81 @@
+/* タブレット用（768px以下の画面） */
+@media screen and (max-width: 768px) {
+    .navigation {
+        width: 100%;
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .top-bar {
+        height: 60px;
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .input {
+        width: 240px;
+    }
+
+    .primary {
+        width: 180px;
+        padding: 10px;
+    }
+
+    .container {
+        gap: 16px;
+    }
+
+    .products {
+        padding: 40px 20px;
+        gap: 40px;
+    }
+}
+
+/* スマホ用（480px以下の画面） */
+@media screen and (max-width: 480px) {
+    .navigation {
+        width: 100%;
+        gap: 10px;
+        font-size: 12px;
+        justify-content: center;
+    }
+
+    .top-bar {
+        height: 50px;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .input {
+        width: 200px;
+    }
+
+    .primary {
+        width: 160px;
+        padding: 8px;
+    }
+
+    .container {
+        gap: 12px;
+    }
+
+    .products {
+        padding: 30px 10px;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px){
 .title {
     position: relative;
     line-height: 36px;
@@ -551,5 +629,11 @@
     font-size: 40px;
     color: #000;
     font-family: Roboto;
+}
+
+a {
+    text-decoration: none;
+}
+
 }
 

@@ -1,36 +1,44 @@
 @extends('layouts.app')
 
+@section('title', '投稿一覧')
+
 @section('content')
-<div class="col">
-    <nav class="mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/">トップ</a></li>
-            <li class="breadcrumb-item active" aria-current="page">商品一覧</li>
-        </ol>
-    </nav>
-    <div class="col-xl-3 col-lg-4 col-md-12">
-                <form method="GET" action="{{ route('products.index') }}" class="w-100 mb-3">
-                    <div class="input-group">
-                        <button type="submit" class="btn text-white shadow-sm nagoyameshi-btn">検索</button>
+    @if (session('flash_message'))
+        <p class="text-success">{{ session('flash_message') }}</p>
+    @endif
+
+    @if (session('error_message'))
+        <p class="text-danger">{{ session('error_message') }}</p>
+    @endif
+
+    <div class="mb-2">
+        <a href="{{ route('products.create') }}" class="text-decoration-none">新規投稿</a>
+    </div>
+
+    @if($products->isNotEmpty())
+        @foreach($products as $product)
+            <article>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h2 class="card-title fs-5">{{ $product->title }}</h2>
+                        <p class="card-text">{{ $product->content }}</p>
+                        <p class="card-text">{{ $product->updated_at }}</p>
+
+                        <div class="d-flex">
+                            <a href="{{ route('products.show', $product) }}" class="btn btn-outline-primary d-block me-1">詳細</a>
+                            <a href="{{ route('products.edit', $product) }}" class="btn btn-outline-primary d-block me-1">編集</a>
+
+                            <form action="{{ route('products.destroy', $product) }}" method="POST" onsubmit="return confirm('本当に削除してもよろしいですか？');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-outline-danger">削除</button>
+                            </form>
+                        </div>
                     </div>
-                </form>
-
-            </div>
-
-            <div class="col">
-                <div class="d-flex justify-content-between flex-wrap">
-                    <p class="fs-5 mb-3">
-                        <span class="fs-6">
-                        </span>
-                    </p>
-                    <form method="GET" action="{{ route('products.index') }}" class="mb-3 nagoyameshi-sort-box">
-                        
-                        <select class="form-select form-select-sm" name="select_sort" aria-label=".form-select-sm example" onChange="this.form.submit();">
-                            
-                        </select>
-                    </form>
                 </div>
-
-                
-        </div>
+            </article>
+        @endforeach
+    @else
+        <p>投稿はありません。</p>
+    @endif
 @endsection
