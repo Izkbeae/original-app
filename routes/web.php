@@ -79,7 +79,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth:admin
     Route::resource('users', Admin\UserController::class)->only(['index', 'show']);
 
     //Restaunrant
-    Route::resource('restaurants', Admin\RestaurantController::class);
+    Route::resource('products', Admin\ProductController::class);
 
     //Category
     Route::resource('categories', Admin\CategoryController::class)->only(['index', 'store', 'update', 'destroy']);
