@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '投稿一覧')
+@section('title', '商品一覧')
 
 @section('content')
     @if (session('flash_message'))
@@ -10,10 +10,6 @@
     @if (session('error_message'))
         <p class="text-danger">{{ session('error_message') }}</p>
     @endif
-
-    <div class="mb-2">
-        <a href="{{ route('products.create') }}" class="text-decoration-none">新規投稿</a>
-    </div>
 
     @if($products->isNotEmpty())
         @foreach($products as $product)
@@ -39,6 +35,6 @@
             </article>
         @endforeach
     @else
-        <p>投稿はありません。</p>
+        <p>商品はありません。</p>
     @endif
 @endsection

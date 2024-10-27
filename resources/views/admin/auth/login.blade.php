@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container py-4 nagoyameshi-container">
+    <div class="container my-4 nagoyameshi-container">
         <div class="row justify-content-center">
             <div class="col-xl-3 col-lg-4 col-md-5 col-sm-7">
                 <h1 class="mb-4 text-center">ログイン</h1>
@@ -18,7 +18,7 @@
                     </div>
                 @endif
 
-                <form method="POST" action="{{ route('login') }}">
+                <form method="POST" action="{{ route('admin.login') }}">
                     @csrf
                     <div class="form-group mb-3">
                             <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="メールアドレス" autofocus>
@@ -37,25 +37,10 @@
                                 </label>
                             </div>
                     </div>
-
-                    <div class="form-group d-flex justify-content-center mb-4">
-                        <button type="submit" class="btn text-white shadow-sm w-100 nagoyameshi-btn">ログイン</button>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                        <button type="submit" class="btn btn-outline-secondary btn-lg px-4">ログイン</button>
                     </div>
                 </form>
-
-                <hr class="my-4">
-
-                <div class="text-center mb-3">
-                    <a href="{{ route('password.request') }}" class="text-decorat>
-                        パスワードをお忘れの方はこちら
-                    </a>
-                </div>
-
-                <div class="text-center">
-                    <a href="{{ route('register') }}">
-                        新規会員登録はこちら
-                    </a>
-                </div>
             </div>
         </div>
     </div>

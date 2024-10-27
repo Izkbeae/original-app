@@ -4,14 +4,4 @@
           WASHWISE
         </a>
       </div>
-      
-
-      <div class="col-md-3 text-end">
-      <a href="{{ route('login') }}" class="text-decoration-none">
-        <button type="button" class="btn btn-outline-primary me-2">ログイン</button>
-      </a>
-      <a href="{{ route('register') }}">
-        <button type="button" class="btn btn-outline-primary me-2">新規登録</button>
-      </a>
-      </div>
     </header>
