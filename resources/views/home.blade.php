@@ -17,8 +17,8 @@
                 <div class="row">
                     <div class="col-12">
                         <p class="samuraimart-product-label mt-2">
-                            和栗の詰め合わせ<br>
-                            <label>￥2000</label>
+                            洗剤<br>
+                            <label>￥1000</label>
                         </p>
                     </div>
                 </div>
@@ -30,8 +30,8 @@
               <div class="row">
                   <div class="col-12">
                       <p class="samuraimart-product-label mt-2">
-                          和栗の詰め合わせ<br>
-                          <label>￥2000</label>
+                          洗剤<br>
+                          <label>￥1000</label>
                       </p>
                   </div>
               </div>
@@ -43,8 +43,8 @@
             <div class="row">
                 <div class="col-12">
                     <p class="samuraimart-product-label mt-2">
-                        和栗の詰め合わせ<br>
-                        <label>￥2000</label>
+                        洗剤<br>
+                        <label>￥1000</label>
                     </p>
                 </div>
             </div>
@@ -68,8 +68,8 @@
               <div class="row">
                   <div class="col-12">
                       <p class="samuraimart-product-label mt-2">
-                          和栗の詰め合わせ<br>
-                          <label>￥2000</label>
+                          洗剤<br>
+                          <label>￥1000</label>
                       </p>
                   </div>
               </div>
@@ -81,8 +81,8 @@
             <div class="row">
                 <div class="col-12">
                     <p class="samuraimart-product-label mt-2">
-                        和栗の詰め合わせ<br>
-                        <label>￥2000</label>
+                        洗剤<br>
+                        <label>￥1000</label>
                     </p>
                 </div>
             </div>
@@ -94,8 +94,8 @@
           <div class="row">
               <div class="col-12">
                   <p class="samuraimart-product-label mt-2">
-                      和栗の詰め合わせ<br>
-                      <label>￥2000</label>
+                      洗剤<br>
+                      <label>￥1000</label>
                   </p>
               </div>
           </div>
@@ -119,8 +119,8 @@
             <div class="row">
                 <div class="col-12">
                     <p class="samuraimart-product-label mt-2">
-                        和栗の詰め合わせ<br>
-                        <label>￥2000</label>
+                        洗剤<br>
+                        <label>￥1000</label>
                     </p>
                 </div>
             </div>
@@ -132,8 +132,8 @@
           <div class="row">
               <div class="col-12">
                   <p class="samuraimart-product-label mt-2">
-                      和栗の詰め合わせ<br>
-                      <label>￥2000</label>
+                      洗剤<br>
+                      <label>￥1000</label>
                   </p>
               </div>
           </div>
@@ -145,8 +145,8 @@
         <div class="row">
             <div class="col-12">
                 <p class="samuraimart-product-label mt-2">
-                    和栗の詰め合わせ<br>
-                    <label>￥2000</label>
+                    洗剤<br>
+                    <label>￥1000</label>
                 </p>
             </div>
         </div>
